@@ -1,4 +1,4 @@
-package s1.c2.recursion;
+package s1_c2_recursion;
 
 public class FibonacciSeries {
     public int findFibonacci(int number){

@@ -1,4 +1,4 @@
-package s2.c2.node;
+package s2_c2_node;
 
 public class SingleNode {
 

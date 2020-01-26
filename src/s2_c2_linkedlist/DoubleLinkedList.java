@@ -1,6 +1,6 @@
-package s2.c2.linkedlist;
+package s2_c2_linkedlist;
 
-import s2.c2.node.DoubleNode;
+import s2_c2_node.DoubleNode;
 
 public class DoubleLinkedList {
 

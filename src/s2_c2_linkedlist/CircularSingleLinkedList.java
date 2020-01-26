@@ -1,6 +1,6 @@
-package s2.c2.linkedlist;
+package s2_c2_linkedlist;
 
-import s2.c2.node.SingleNode;
+import s2_c2_node.SingleNode;
 
 public class CircularSingleLinkedList {
 

@@ -1,4 +1,4 @@
-package s2.c1.array;
+package s2_c1_array;
 
 public class SingleDimensionArray {
 

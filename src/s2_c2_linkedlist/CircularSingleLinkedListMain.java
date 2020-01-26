@@ -1,4 +1,4 @@
-package s2.c2.linkedlist;
+package s2_c2_linkedlist;
 
 public class CircularSingleLinkedListMain {
 
