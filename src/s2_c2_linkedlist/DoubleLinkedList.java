@@ -18,22 +18,22 @@ public class DoubleLinkedList {
         setSize(1);
     }
 
-    public boolean existsLinkedList(){
+    public boolean existsLinkedList() {
         return head != null;
     }
 
     public void traverseLinkedList() {
-        if(existsLinkedList()) {
+        if (existsLinkedList()) {
             //System.out.println("Linked List now: ");
-            DoubleNode tempNode=head;
-            for(int i =0; i<size;i++) {
+            DoubleNode tempNode = head;
+            for (int i = 0; i < size; i++) {
                 System.out.print(tempNode.getValue());
-                if(i!=size-1) {
+                if (i != size - 1) {
                     System.out.print(" -> ");
                 }
-                tempNode=tempNode.getNext();
+                tempNode = tempNode.getNext();
             }
-        }else {
+        } else {
             System.out.println("Linked List does not exists");
         }
         System.out.println("\n");
@@ -43,21 +43,21 @@ public class DoubleLinkedList {
     public void insertInLinkedList(int nodeValue, int location) {
         DoubleNode node = new DoubleNode();
         node.setValue(nodeValue);
-        if(!existsLinkedList()){
+        if (!existsLinkedList()) {
             System.out.println("Linked List not exist");
             return;
         }
-        if(location == 0){
+        if (location == 0) {
             node.setNext(head);
             node.setPrev(null);
             head.setPrev(node);
             head = node;
-        }else if(location >= size){
-             node.setNext(null);
-             node.setPrev(tail);
-             tail.setNext(node);
-             tail = node;
-        }else {// insert at specified location
+        } else if (location >= size) {
+            node.setNext(null);
+            node.setPrev(tail);
+            tail.setNext(node);
+            tail = node;
+        } else {// insert at specified location
             DoubleNode tempNode = head;
             int index = 0;
             while (index < location - 1) {// loop till we reach specified node
@@ -73,14 +73,14 @@ public class DoubleLinkedList {
     }
 
     public boolean searchNode(int nodeValue) {
-        if(existsLinkedList()) {
-            DoubleNode tempNode=head;
-            for(int i =0; i<size;i++) {
-                if(tempNode.getValue()==nodeValue) {
+        if (existsLinkedList()) {
+            DoubleNode tempNode = head;
+            for (int i = 0; i < size; i++) {
+                if (tempNode.getValue() == nodeValue) {
                     System.out.print("Found the node at location: " + i);
                     return true;
                 }
-                tempNode=tempNode.getNext();
+                tempNode = tempNode.getNext();
             }
         }
         System.out.print("Node not found!! ");
@@ -92,7 +92,7 @@ public class DoubleLinkedList {
             DoubleNode tempNode = tail;
             for (int i = 0; i < size; i++) {
                 System.out.print(tempNode.getValue());
-                if (i != size-1) {
+                if (i != size - 1) {
                     System.out.print(" <- ");
                 }
                 tempNode = tempNode.getPrev();
@@ -125,7 +125,7 @@ public class DoubleLinkedList {
                 head = tail = null;
                 setSize(getSize() - 1);
                 return;
-            }else {
+            } else {
                 head = head.getNext();
                 head.setPrev(null);
                 setSize(getSize() - 1);
@@ -152,11 +152,11 @@ public class DoubleLinkedList {
 
     }// end of method
 
-    public void findHeadAndTail(){
-        if(existsLinkedList()){
+    public void findHeadAndTail() {
+        if (existsLinkedList()) {
             System.out.println("Head : " + head.getValue());
             System.out.println("Tail : " + tail.getValue());
-        }else{
+        } else {
             System.out.println("Linked List not exist");
         }
     }
@@ -184,7 +184,6 @@ public class DoubleLinkedList {
     public void setSize(int size) {
         this.size = size;
     }
-
 
 
 }

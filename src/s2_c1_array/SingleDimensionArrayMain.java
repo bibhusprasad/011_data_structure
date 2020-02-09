@@ -2,8 +2,8 @@ package s2_c1_array;
 
 public class SingleDimensionArrayMain {
 
-    public static void main(String[] args) {
-        SingleDimensionArray singleDimensionArray = new SingleDimensionArray(10);
+    public static void main(final String[] args) {
+        final SingleDimensionArray singleDimensionArray = new SingleDimensionArray(10);
         System.out.println("Printing the array elements.");
         singleDimensionArray.traverseArray();
         System.out.println();

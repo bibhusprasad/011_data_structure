@@ -2,21 +2,22 @@ package s1_c2_recursion;
 
 public class NumberPalindrome {
 
-    public int checkPalindrome(int number, int temp){
-        if(number == 0)
+    public int checkPalindrome(final int number, int temp) {
+        if (number == 0) {
             return temp;
+        }
         temp = (temp * 10) + (number % 10);
-        return checkPalindrome(number/10, temp);
+        return this.checkPalindrome(number / 10, temp);
 
     }
 
-    public static void main(String[] args) {
-        NumberPalindrome numberPalindrome = new NumberPalindrome();
-        int  number = 1221;
-        int temp = numberPalindrome.checkPalindrome(1221, 0);
-        if(number == temp){
+    public static void main(final String[] args) {
+        final NumberPalindrome numberPalindrome = new NumberPalindrome();
+        final int number = 1221;
+        final int temp = numberPalindrome.checkPalindrome(1221, 0);
+        if (number == temp) {
             System.out.println("Yes");
-        }else{
+        } else {
             System.out.println("No");
         }
     }

@@ -1,8 +1,8 @@
 package s2_c2_linkedlist;
 
 public class SingleLinkedListMain {
-    public static void main(String[] args) {
-        SingleLinkedList list = new SingleLinkedList();
+    public static void main(final String[] args) {
+        final SingleLinkedList list = new SingleLinkedList();
 
         list.createSingleLinkedList(5);
         list.traverseLinkedList();

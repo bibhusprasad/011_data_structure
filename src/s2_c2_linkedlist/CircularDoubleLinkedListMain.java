@@ -1,9 +1,9 @@
 package s2_c2_linkedlist;
 
 public class CircularDoubleLinkedListMain {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        CircularDoubleLinkedList list = new CircularDoubleLinkedList();
+        final CircularDoubleLinkedList list = new CircularDoubleLinkedList();
         list.createDoubleLinkedList(5);
         list.insertInLinkedList(10, 1);
         list.insertInLinkedList(20, 2);

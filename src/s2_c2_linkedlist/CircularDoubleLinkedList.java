@@ -8,7 +8,6 @@ public class CircularDoubleLinkedList {
     private DoubleNode tail;
     private int size;// denotes size of list
 
-
     public int getSize() {
         return size;
     }
@@ -105,7 +104,7 @@ public class CircularDoubleLinkedList {
                 }
                 tempNode = tempNode.getNext();
             }
-        }else {
+        } else {
             System.out.println("Linked List does not exists !");
         }
         System.out.println();
@@ -119,7 +118,7 @@ public class CircularDoubleLinkedList {
             System.out.println("\nPrinting Linked list in reverse order...");
             for (int i = 0; i < size; i++) {
                 System.out.print(tempNode.getValue());
-                if (i != size-1) {
+                if (i != size - 1) {
                     System.out.print(" <- ");
                 }
                 tempNode = tempNode.getPrev();
@@ -154,7 +153,7 @@ public class CircularDoubleLinkedList {
         if (tail == null) {
             System.out.println("Linked List is already deleted, nothing to delete anymore !");
             return;
-        }else {
+        } else {
             head.setPrev(null);
             tail.setNext(null);
             head = null;
@@ -194,7 +193,7 @@ public class CircularDoubleLinkedList {
                 head = tail = null;
                 setSize(getSize() - 1);
                 return;
-            }else {
+            } else {
                 head = head.getNext();
                 head.setPrev(null);
                 tail.setNext(head);

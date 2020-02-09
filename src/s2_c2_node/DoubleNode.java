@@ -7,31 +7,31 @@ public class DoubleNode {
     private DoubleNode prev;
 
     public int getValue() {
-        return value;
+        return this.value;
     }
 
-    public void setValue(int value) {
+    public void setValue(final int value) {
         this.value = value;
     }
 
     public DoubleNode getNext() {
-        return next;
+        return this.next;
     }
 
-    public void setNext(DoubleNode next) {
+    public void setNext(final DoubleNode next) {
         this.next = next;
     }
 
     public DoubleNode getPrev() {
-        return prev;
+        return this.prev;
     }
 
-    public void setPrev(DoubleNode prev) {
+    public void setPrev(final DoubleNode prev) {
         this.prev = prev;
     }
 
     @Override
-    public String toString(){
-        return value + "";
+    public String toString() {
+        return this.value + "";
     }
 }

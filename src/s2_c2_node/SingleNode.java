@@ -6,23 +6,23 @@ public class SingleNode {
     private SingleNode next;
 
     public int getValue() {
-        return value;
+        return this.value;
     }
 
-    public void setValue(int value) {
+    public void setValue(final int value) {
         this.value = value;
     }
 
     public SingleNode getNext() {
-        return next;
+        return this.next;
     }
 
-    public void setNext(SingleNode next) {
+    public void setNext(final SingleNode next) {
         this.next = next;
     }
 
     @Override
-    public String toString(){
-        return value + "";
+    public String toString() {
+        return this.value + "";
     }
 }

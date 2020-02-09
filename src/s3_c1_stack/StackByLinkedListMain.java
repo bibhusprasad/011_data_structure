@@ -13,7 +13,7 @@ public class StackByLinkedListMain {
 
         System.out.println("Peeking value");
         System.out.println(stack.peek());
-        System.out.println();
+
 
         System.out.println("Poping 11 values from stack");
         for (int i = 1; i <= 11; i++) {

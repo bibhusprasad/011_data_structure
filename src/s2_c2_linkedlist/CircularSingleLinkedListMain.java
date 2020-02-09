@@ -2,8 +2,8 @@ package s2_c2_linkedlist;
 
 public class CircularSingleLinkedListMain {
 
-    public static void main(String[] args){
-        CircularSingleLinkedList list = new CircularSingleLinkedList();
+    public static void main(final String[] args) {
+        final CircularSingleLinkedList list = new CircularSingleLinkedList();
         list.createSingleLinkedList(5);
         System.out.println("Linked List now: ");
         list.traverseLinkedList();
@@ -60,6 +60,5 @@ public class CircularSingleLinkedListMain {
 
         list.deleteLinkedList();
         list.traverseLinkedList();
-
     }
 }

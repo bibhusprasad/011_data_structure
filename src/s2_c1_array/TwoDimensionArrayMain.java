@@ -3,7 +3,7 @@ package s2_c1_array;
 public class TwoDimensionArrayMain {
 
     public static void main(String[] args) {
-        TwoDimensionArray twoDimensionArray = new TwoDimensionArray(2,3);
+        TwoDimensionArray twoDimensionArray = new TwoDimensionArray(2, 3);
         System.out.println("Printing the array elements.");
         twoDimensionArray.traverseArray();
         System.out.println();
@@ -20,7 +20,7 @@ public class TwoDimensionArrayMain {
         twoDimensionArray.searchInAnArray(50);
         System.out.println();
         System.out.println("Delete a cell");
-        twoDimensionArray.delete(1,2);
+        twoDimensionArray.delete(1, 2);
         System.out.println();
         System.out.println("Final Array Content");
         twoDimensionArray.traverseArray();

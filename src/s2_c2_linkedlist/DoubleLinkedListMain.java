@@ -2,8 +2,8 @@ package s2_c2_linkedlist;
 
 public class DoubleLinkedListMain {
 
-    public static void main(String[] args) {
-        DoubleLinkedList list = new DoubleLinkedList();
+    public static void main(final String[] args) {
+        final DoubleLinkedList list = new DoubleLinkedList();
         list.createDoubleLinkedList(5);
         list.traverseLinkedList();
 
