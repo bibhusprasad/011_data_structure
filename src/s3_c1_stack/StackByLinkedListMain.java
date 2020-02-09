@@ -2,8 +2,8 @@ package s3_c1_stack;
 
 public class StackByLinkedListMain {
 
-    public static void main(String[] args) {
-        StackByLinkedList stack = new StackByLinkedList();
+    public static void main(final String[] args) {
+        final StackByLinkedList stack = new StackByLinkedList();
 
         System.out.println("Pushing 10 values into stack");
         for (int i = 1; i <= 10; i++) {

@@ -8,27 +8,27 @@ public class DoubleLinkedList {
     private DoubleNode tail;
     private int size;   //denotes size of list
 
-    public void createDoubleLinkedList(int nodeValue) {
-        DoubleNode node = new DoubleNode();
+    public void createDoubleLinkedList(final int nodeValue) {
+        final DoubleNode node = new DoubleNode();
         node.setValue(nodeValue);
         node.setNext(null);
         node.setPrev(null);
-        head = node;
-        tail = node;
-        setSize(1);
+        this.head = node;
+        this.tail = node;
+        this.setSize(1);
     }
 
     public boolean existsLinkedList() {
-        return head != null;
+        return this.head != null;
     }
 
     public void traverseLinkedList() {
-        if (existsLinkedList()) {
+        if (this.existsLinkedList()) {
             //System.out.println("Linked List now: ");
-            DoubleNode tempNode = head;
-            for (int i = 0; i < size; i++) {
+            DoubleNode tempNode = this.head;
+            for (int i = 0; i < this.size; i++) {
                 System.out.print(tempNode.getValue());
-                if (i != size - 1) {
+                if (i != this.size - 1) {
                     System.out.print(" -> ");
                 }
                 tempNode = tempNode.getNext();
@@ -40,25 +40,25 @@ public class DoubleLinkedList {
     }
 
 
-    public void insertInLinkedList(int nodeValue, int location) {
-        DoubleNode node = new DoubleNode();
+    public void insertInLinkedList(final int nodeValue, final int location) {
+        final DoubleNode node = new DoubleNode();
         node.setValue(nodeValue);
-        if (!existsLinkedList()) {
+        if (!this.existsLinkedList()) {
             System.out.println("Linked List not exist");
             return;
         }
         if (location == 0) {
-            node.setNext(head);
+            node.setNext(this.head);
             node.setPrev(null);
-            head.setPrev(node);
-            head = node;
-        } else if (location >= size) {
+            this.head.setPrev(node);
+            this.head = node;
+        } else if (location >= this.size) {
             node.setNext(null);
-            node.setPrev(tail);
-            tail.setNext(node);
-            tail = node;
+            node.setPrev(this.tail);
+            this.tail.setNext(node);
+            this.tail = node;
         } else {// insert at specified location
-            DoubleNode tempNode = head;
+            DoubleNode tempNode = this.head;
             int index = 0;
             while (index < location - 1) {// loop till we reach specified node
                 tempNode = tempNode.getNext();
@@ -69,13 +69,13 @@ public class DoubleLinkedList {
             tempNode.setNext(node);
             node.getNext().setPrev(node);
         }
-        setSize(getSize() + 1);
+        this.setSize(this.getSize() + 1);
     }
 
-    public boolean searchNode(int nodeValue) {
-        if (existsLinkedList()) {
-            DoubleNode tempNode = head;
-            for (int i = 0; i < size; i++) {
+    public boolean searchNode(final int nodeValue) {
+        if (this.existsLinkedList()) {
+            DoubleNode tempNode = this.head;
+            for (int i = 0; i < this.size; i++) {
                 if (tempNode.getValue() == nodeValue) {
                     System.out.print("Found the node at location: " + i);
                     return true;
@@ -88,11 +88,11 @@ public class DoubleLinkedList {
     }
 
     public void traverseLinkedListInReverseOrder() {
-        if (existsLinkedList()) {
-            DoubleNode tempNode = tail;
-            for (int i = 0; i < size; i++) {
+        if (this.existsLinkedList()) {
+            DoubleNode tempNode = this.tail;
+            for (int i = 0; i < this.size; i++) {
                 System.out.print(tempNode.getValue());
-                if (i != size - 1) {
+                if (i != this.size - 1) {
                     System.out.print(" <- ");
                 }
                 tempNode = tempNode.getPrev();
@@ -105,83 +105,83 @@ public class DoubleLinkedList {
 
     public void deleteLinkedList() {
         System.out.println("\n\nDeleting Linked List...");
-        DoubleNode tempNode = head;
-        for (int i = 0; i < size; i++) {
+        DoubleNode tempNode = this.head;
+        for (int i = 0; i < this.size; i++) {
             tempNode.setPrev(null);
             tempNode = tempNode.getNext();
         }
 
-        head = null;
-        tail = null;
+        this.head = null;
+        this.tail = null;
         System.out.println("Linked List deleted successfully !");
     }
 
-    public void deletionOfNode(int location) {
-        if (!existsLinkedList()) {
+    public void deletionOfNode(final int location) {
+        if (!this.existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
             return;
         } else if (location == 0) { // we want to delete first element
-            if (getSize() == 1) { // if this is the only node in this list
-                head = tail = null;
-                setSize(getSize() - 1);
+            if (this.getSize() == 1) { // if this is the only node in this list
+                this.head = this.tail = null;
+                this.setSize(this.getSize() - 1);
                 return;
             } else {
-                head = head.getNext();
-                head.setPrev(null);
-                setSize(getSize() - 1);
+                this.head = this.head.getNext();
+                this.head.setPrev(null);
+                this.setSize(this.getSize() - 1);
             }
-        } else if (location >= getSize()) { // If location is not in range or equal, then delete last node
-            DoubleNode tempNode = tail.getPrev(); // temp node points to 2nd last node
-            if (tempNode == head) { // if this is the only element in the list
-                tail = head = null;
-                setSize(getSize() - 1);
+        } else if (location >= this.getSize()) { // If location is not in range or equal, then delete last node
+            final DoubleNode tempNode = this.tail.getPrev(); // temp node points to 2nd last node
+            if (tempNode == this.head) { // if this is the only element in the list
+                this.tail = this.head = null;
+                this.setSize(this.getSize() - 1);
                 return;
             }
             tempNode.setNext(null);
-            tail = tempNode;
-            setSize(getSize() - 1);
+            this.tail = tempNode;
+            this.setSize(this.getSize() - 1);
         } else { // if any inside node is to be deleted
-            DoubleNode tempNode = head;
+            DoubleNode tempNode = this.head;
             for (int i = 0; i < location - 1; i++) {
                 tempNode = tempNode.getNext(); // we need to traverse till we find the location
             }
             tempNode.setNext(tempNode.getNext().getNext()); // delete the required node
             tempNode.getNext().setPrev(tempNode);
-            setSize(getSize() - 1);
+            this.setSize(this.getSize() - 1);
         } // end of else
 
     }// end of method
 
     public void findHeadAndTail() {
-        if (existsLinkedList()) {
-            System.out.println("Head : " + head.getValue());
-            System.out.println("Tail : " + tail.getValue());
+        if (this.existsLinkedList()) {
+            System.out.println("Head : " + this.head.getValue());
+            System.out.println("Tail : " + this.tail.getValue());
         } else {
             System.out.println("Linked List not exist");
         }
     }
 
     public DoubleNode getHead() {
-        return head;
+        return this.head;
     }
 
-    public void setHead(DoubleNode head) {
+    public void setHead(final DoubleNode head) {
         this.head = head;
     }
 
     public DoubleNode getTail() {
-        return tail;
+        return this.tail;
     }
 
-    public void setTail(DoubleNode tail) {
+    public void setTail(final DoubleNode tail) {
         this.tail = tail;
     }
 
     public int getSize() {
-        return size;
+        return this.size;
     }
 
-    public void setSize(int size) {
+    public void setSize(final int size) {
         this.size = size;
     }
 

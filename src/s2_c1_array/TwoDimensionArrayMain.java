@@ -2,8 +2,8 @@ package s2_c1_array;
 
 public class TwoDimensionArrayMain {
 
-    public static void main(String[] args) {
-        TwoDimensionArray twoDimensionArray = new TwoDimensionArray(2, 3);
+    public static void main(final String[] args) {
+        final TwoDimensionArray twoDimensionArray = new TwoDimensionArray(2, 3);
         System.out.println("Printing the array elements.");
         twoDimensionArray.traverseArray();
         System.out.println();

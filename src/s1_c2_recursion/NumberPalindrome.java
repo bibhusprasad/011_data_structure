@@ -8,7 +8,6 @@ public class NumberPalindrome {
         }
         temp = (temp * 10) + (number % 10);
         return this.checkPalindrome(number / 10, temp);
-
     }
 
     public static void main(final String[] args) {
