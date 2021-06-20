@@ -1,0 +1,33 @@
+createBinarySearchTree
+    Initialize root with null  ---O(1)
+
+Time Complexity: O(1)
+Space Complexity: O(1)
+
+
+left_subtree right_subtree root
+InOrder 20 right_subtree
+ls-r-rs 20 right_subtree
+ls-100-15   20  right_subtree
+
+222 50 100 rs 20  right_subtree
+20 100 50 222 15 3 250 35
+
+
+extractMin(value)
+    if tree does not exist                  ---O(1)
+        return error message                ---O(1)
+    else                                    ---O(1)
+        extract 1st cell of array           ---O(1)
+        promote last element to first       ---O(1)
+        sizeOfHeap--                        ---O(1)
+        heapifyTopToBottom                  ---O(log n)
+
+createTrie()
+    create a blank root node
+
+Time Complexity: O(1)
+Space Complexity: O(1)
+
+
+
